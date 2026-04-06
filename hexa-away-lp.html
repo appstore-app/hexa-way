@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Hexa Away - Download</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a0a1a;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Animated hex background */
+  .bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 80%, rgba(244, 114, 182, 0.12) 0%, transparent 60%),
+      #0a0a1a;
+  }
+
+  .hex-grid {
+    position: fixed;
+    inset: -60px;
+    z-index: 0;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66Z' fill='none' stroke='%236366f1' stroke-width='1'/%3E%3Cpath d='M28 100L0 84L0 50L28 34L56 50L56 84L28 100Z' fill='none' stroke='%236366f1' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 56px 84px;
+    animation: drift 20s linear infinite;
+  }
+
+  @keyframes drift {
+    to { transform: translateY(-84px); }
+  }
+
+  .card {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+    padding: 48px 28px 40px;
+    border-radius: 32px;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+    animation: cardIn 0.6s ease-out;
+  }
+
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(30px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .icon-wrap {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 24px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(99,102,241,0.35);
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .icon-wrap svg {
+    width: 54px;
+    height: 54px;
+    fill: #fff;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 32px;
+    font-weight: 400;
+  }
+
+  .dl-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 18px 24px;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    background-size: 200% 200%;
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 24px rgba(99,102,241,0.3);
+    animation: shimmer 3s ease-in-out infinite;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .dl-btn:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 12px rgba(99,102,241,0.4);
+  }
+
+  .dl-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+    flex-shrink: 0;
+  }
+
+  .note {
+    margin-top: 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+  }
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="hex-grid"></div>
+
+<div class="card">
+  <div class="icon-wrap">
+    <!-- Hexagon icon -->
+    <svg viewBox="0 0 24 24"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5zm0 2.18L18.5 7.5v9L12 19.82 5.5 16.5v-9L12 4.18z"/><path d="M12 6.5L7 9.4v5.2l5 2.9 5-2.9V9.4l-5-2.9z"/></svg>
+  </div>
+
+  <h1>Hexa Away</h1>
+  <p class="subtitle">無料でダウンロード</p>
+
+  <!-- ★ ここのURLを変更してください -->
+  <a
+    class="dl-btn"
+    href="https://apps.apple.com/app/hexa-away/id6504324020"
+    onclick="handleClick(event)"
+  >
+    <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.34-3.14-2.57C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+    App Storeで開く
+  </a>
+
+  <p class="note">タップするとApp Storeが開きます</p>
+</div>
+
+<script>
+function handleClick(e) {
+  // Tenjin計測を使いたい場合はここでURLを変更
+  // 例: window.location.href = 'https://track.tenjin.com/v0/click/pfrCGSKQ7TzCfgVXEQUzS';
+
+  // App Store直リンク（確実に開く方法）
+  var url = 'https://apps.apple.com/app/hexa-away/id6504324020';
+
+  // iOSの場合、itms-appsスキームも試す
+  var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  if (isIOS) {
+    // itms-appsスキームでApp Storeアプリを直接起動
+    window.location.href = 'itms-apps://apps.apple.com/app/hexa-away/id6504324020';
+    e.preventDefault();
+    // フォールバック: 1秒後に通常URLへ
+    setTimeout(function() {
+      window.location.href = url;
+    }, 1000);
+  }
+}
+</script>
+
+</body>
+</html>
