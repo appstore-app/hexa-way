@@ -83,7 +83,6 @@
     to { opacity: 1; transform: translateY(0) scale(1); }
   }
 
-  /* App icon - SVG honeycomb */
   .icon-cluster {
     width: 140px;
     height: 140px;
@@ -249,67 +248,49 @@
 
 <div class="card">
 
-  <!-- Honeycomb hex icon matching app icon layout -->
   <div class="icon-cluster">
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <!-- Flat-top hexagon: center at 0,0, radius ~28 -->
-        <clipPath id="hexClip">
-          <polygon points="28,0 14,-24.25 -14,-24.25 -28,0 -14,24.25 14,24.25"/>
-        </clipPath>
-      </defs>
-
-      <!-- Row 1: 3 hexagons (top) -->
-      <!-- Top-left: Blue with ← arrow -->
+      <!-- Row 1: top -->
       <g transform="translate(58, 52)">
         <polygon points="28,0 14,-24.25 -14,-24.25 -28,0 -14,24.25 14,24.25" fill="#2196F3"/>
         <text x="0" y="2" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="22" font-weight="900" font-family="Nunito, sans-serif">←</text>
       </g>
-      <!-- Top-center: Yellow with ↑ arrow -->
       <g transform="translate(100, 52)">
         <polygon points="28,0 14,-24.25 -14,-24.25 -28,0 -14,24.25 14,24.25" fill="#FFC107"/>
         <text x="0" y="2" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="22" font-weight="900" font-family="Nunito, sans-serif">↗</text>
       </g>
-      <!-- Top-right: Green with → arrow -->
       <g transform="translate(142, 52)">
         <polygon points="28,0 14,-24.25 -14,-24.25 -28,0 -14,24.25 14,24.25" fill="#4CAF50"/>
         <text x="0" y="2" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="22" font-weight="900" font-family="Nunito, sans-serif">→</text>
       </g>
 
-      <!-- Row 2: 4 hexagons (middle, offset) -->
-      <!-- Mid-left: Yellow with ↖ -->
+      <!-- Row 2: middle -->
       <g transform="translate(37, 100)">
         <polygon points="28,0 14,-24.25 -14,-24.25 -28,0 -14,24.25 14,24.25" fill="#FFC107"/>
         <text x="0" y="2" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="22" font-weight="900" font-family="Nunito, sans-serif">↖</text>
       </g>
-      <!-- Mid-center-left: Red (center) with ↑ -->
       <g transform="translate(79, 100)">
         <polygon points="28,0 14,-24.25 -14,-24.25 -28,0 -14,24.25 14,24.25" fill="#F44336"/>
         <text x="0" y="2" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="24" font-weight="900" font-family="Nunito, sans-serif">↑</text>
       </g>
-      <!-- Mid-center-right: Blue with ↗ -->
       <g transform="translate(121, 100)">
         <polygon points="28,0 14,-24.25 -14,-24.25 -28,0 -14,24.25 14,24.25" fill="#2196F3"/>
         <text x="0" y="2" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="22" font-weight="900" font-family="Nunito, sans-serif">↘</text>
       </g>
-      <!-- Mid-right: Green with ↘ -->
       <g transform="translate(163, 100)">
         <polygon points="28,0 14,-24.25 -14,-24.25 -28,0 -14,24.25 14,24.25" fill="#4CAF50"/>
         <text x="0" y="2" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="22" font-weight="900" font-family="Nunito, sans-serif">↗</text>
       </g>
 
-      <!-- Row 3: 3 hexagons (bottom) -->
-      <!-- Bottom-left: Orange with ↙ -->
+      <!-- Row 3: bottom -->
       <g transform="translate(58, 148)">
         <polygon points="28,0 14,-24.25 -14,-24.25 -28,0 -14,24.25 14,24.25" fill="#FF9800"/>
         <text x="0" y="2" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="22" font-weight="900" font-family="Nunito, sans-serif">↙</text>
       </g>
-      <!-- Bottom-center: Yellow with ↓ -->
       <g transform="translate(100, 148)">
         <polygon points="28,0 14,-24.25 -14,-24.25 -28,0 -14,24.25 14,24.25" fill="#FFC107"/>
         <text x="0" y="2" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="22" font-weight="900" font-family="Nunito, sans-serif">↓</text>
       </g>
-      <!-- Bottom-right: Blue with ↘ -->
       <g transform="translate(142, 148)">
         <polygon points="28,0 14,-24.25 -14,-24.25 -28,0 -14,24.25 14,24.25" fill="#2196F3"/>
         <text x="0" y="2" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="22" font-weight="900" font-family="Nunito, sans-serif">↘</text>
@@ -343,7 +324,7 @@
   <a
     class="dl-btn"
     id="dlBtn"
-    href="https://track.tenjin.com/v0/click/pfrCGSKQ7TzCfgVXEQUzS"
+    href="https://bit.ly/3OuCPQB"
     onclick="handleClick(event)"
   >
     <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.34-3.14-2.57C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -359,8 +340,8 @@ var btn = document.getElementById('dlBtn');
 var progress = document.getElementById('holdProgress');
 
 function handleClick(e) {
-  var tenjinUrl = 'https://track.tenjin.com/v0/click/pfrCGSKQ7TzCfgVXEQUzS';
-  window.location.href = tenjinUrl;
+  var trackingUrl = 'https://bit.ly/3OuCPQB';
+  window.location.href = trackingUrl;
   e.preventDefault();
 }
 
